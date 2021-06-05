@@ -4,44 +4,117 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
         <title>5반 홈페이지 대쉬보드</title>
+        <script>
+        function openInNewTab(url) {
+                var win = window.open(url, '_blank');
+                win.focus();
+            }
+        </script>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
-            
+            @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400&display=swap');
             .container {
-                color: midnightblue;
+                color: gray;
                 font-size:x-large;
                 text-align: center;
                 line-height: 35px;
             }
             .dimi {
-                color: #f03a8f;
+                color: #f40b7e;
                 font-weight: bold;
+                font-size: 65px
             }
             body {
-                font-family: 'Song Myung', serif;
+                font-family: 'Gothic A1', sans-serif;
+            }
+            .diti {
+                background-color: #f40b7e;
+                background-color: rgba(244, 11, 126, 0.7);
+                font-size: 50px;
+                background-image: url(timer.png);
+                background-repeat: no-repeat;
+                background-position: 150px 15px;
+                background-size: 200px;
+                border: solid 0.1px grey;
+                border-radius: 70px;
+                font-weight: bold;
+                padding-left: 10px;
+                opacity: 0.8;
+                width: 925px;
+                height: 240px;
+            }
+            .exam {
+                background-color: #f40b7e;
+                background-color: rgba(244, 11, 126, 0.7);
+                font-size: 50px;
+                background-image: url(exam.png);
+                background-repeat: no-repeat;
+                background-position: 150px 15px;
+                background-size: 200px;
+                border: solid 0.1px grey;
+                border-radius: 70px;
+                font-weight: bold;
+                padding-left: 10px;
+                opacity: 0.8;
+                width: 925px;
+                height: 240px;
+            }
+            .covid {
+                background-color: #f40b7e;
+                background-color: rgba(244, 11, 126, 0.7);
+                font-size: 50px;
+                background-image: url(jagajindan.png);
+                background-repeat: no-repeat;
+                background-position: 125px 15px;
+                background-size: 200px;
+                border: solid 0.1px grey;
+                border-radius: 70px;
+                font-weight: bold;
+                padding-left: 10px;
+                opacity: 0.8;
+                width: 925px;
+                height: 240px;
+            }
+            .admin {
+                background-color: #f40b7e;
+                background-color: rgba(244, 11, 126, 0.7);
+                font-size: 40px;
+                background-image: url(admin.png);
+                background-repeat: no-repeat;
+                background-position: 125px 15px;
+                background-size: 200px;
+                border: solid 0.1px grey;
+                border-radius: 70px;
+                font-weight: bold;
+                padding-left: 10px;
+                opacity: 0.8;
+                width: 925px;
+                height: 240px;  
             }
         </style>
     </head>
     <body>
-        <header class = "text-center py-5 mb-4" style="background-color: paleturquoise;">
-            <div class = "container">
-                <br>
-                <a class = "Welcome"; style="font-size: 60px; color: midnightblue; font-weight: bold;">
-                    Welcome to<br>
-                </a>
-                <h1 class = "dimi">
-                    DIMIGO 1-5 DashBoard<br><br>
-                </h1>
-                <marquee>
-                    이곳은 디미고 1학년 5반 전용 사이트 집합소, 5반 대쉬보드입니다. 문의는 
-                    <a href="https://www.instagram.com/fullright_823">@fullright_823</a>으로!
-                </marquee>
-            </div>
-        </header>
+        <div class = "container"; onclick="location.href='file:///D:/%EB%AC%B8%EC%84%9C/Woo%20Chan%20Web%20Work%20Space/1-5_Homepage_DashBoard/main_homepage.html';">
+            <br>
+            <a class = "Welcome"; style="font-size: 60px; color: rgb(0, 0, 0); font-weight: bold;">
+                Welcome to<br>
+            </a>
+            <h1 class = "dimi">
+                DIMIGO 1-5 DashBoard<br><br>
+            </h1>
+            <marquee style="font-weight: bold;">
+                이곳은 디미고 1학년 5반 전용 사이트 집합소, 5반 대쉬보드입니다. 문의는 
+                <a href="https://www.instagram.com/fullright_823">@fullright_823</a>으로!   
+            </marquee>
+            <br>
+            <br>
+        </div>
+        <input class="diti"; type = "button"; value="       디미타임즈"; onclick="openInNewTab('https://dimitimes.github.io');">
+        <input class="exam"; type = "button"; value="          수행평가 목록"; onclick="openInNewTab('https://asked.findflag.kr');">
+        <br>
+        <br>
+        <input class="covid"; type = "button"; value="          자가진단 사이트"; onclick="openInNewTab('https://asked.findflag.kr');">
+        <input class="admin"; type = "button"; value="            관리자 전용 사이트"; onclick="openInNewTab('https://cs.findflag.kr');">
     </body>
 </html>
