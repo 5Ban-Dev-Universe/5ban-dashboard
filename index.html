@@ -47,6 +47,31 @@
             img {
                 margin: 0% 5px 0% 0%;
             }
+            #popup {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .7);
+                z-index: 1;
+            }
+            #popup.hide {
+                display: none;
+            }
+            #popup.has-filter {
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+            }
+            #popup .content {
+                padding: 20px 50px 20px 50px;
+                background: #fff;
+                border-radius: 15px;
+                box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+            }
         </style>
     </head>
     <body>
@@ -54,7 +79,7 @@
         <h1 style="color: gray;">Welcome to</h1>
         <h1 style="color: #f40b7e;">5Ban Dashboard</h1>
         <br>
-        <h2 style="color: gray;">ⓘ 해가 지고 나면 시작되는 그들만의 파티. 6월 8일 찾아옵니다.</h2>
+        <h2 style="color: gray;" onclick="showPopup(true)">ⓘ 해가 지고 나면 시작되는 그들만의 파티. 6월 8일 찾아옵니다.</h2>
         <br><br><br>
         <div onclick="window.open('https://dimitimes.github.io');" style="border: 6px solid rgba(244, 11, 128, 1)">
             <br><br>
@@ -88,5 +113,29 @@
             <br>
         </div>
         <br><br><br><br>
+        <div id="popup" class="hide" style="margin: 0%; border-radius: 0px;">
+            <div class="content" style="margin: 0%;">
+                <p>저희는 일몰 후 이 페이지를 보기에 눈이 아프다는 사실을 인지하였습니다.</p>
+                <p>이슈가 발생한 즉시 저희 개발 유니버스는 문제점을 인정하고, 대안을 수색했습니다.</p>
+                <p>마침내 저희 개발 유니버스는 대안을 찾았고, 6월 8일, 여러분께 그 대안을 공개하고자 합니다.</p>
+                <p style="color: gray;" onclick="closePopup()">[확인]</p>
+            </div>
+        </div>
+        <script>
+            function showPopup(hasFilter) {
+                const popup = document.querySelector('#popup');
+                if (hasFilter) {
+                    popup.classList.add('has-filter');
+                } else {
+                    popup.classList.remove('has-filter');
+                }
+                popup.classList.remove('hide');
+            }
+
+            function closePopup() {
+                const popup = document.querySelector('#popup');
+                popup.classList.add('hide');
+            }
+        </script>
     </body>
 </html>
