@@ -4,8 +4,14 @@
         <meta charset="utf-8">
         <title>5Ban Dashboard</title>
         <script>
-            if (document.location.protocol == 'http:' || document.location.protocol == '') {
-                window.location.replace("https://5.findflag.kr");
+            const today = new Date()
+            const hours = today.getHours()
+            if (document.location.protocol !== 'https:') {
+                if(5 <= hours && hours <= 19){
+                    window.location.replace("https://5.findflag.kr/light.html")
+                }else{
+                    window.location.replace("https://5.findflag.kr/dark.html")
+                }
             }
         </script>
         <style>
@@ -120,18 +126,18 @@
         </div>
         <script>
             function showPopup(hasFilter) {
-                const popup = document.querySelector('#popup');
+                const popup = document.querySelector('#popup')
                 if (hasFilter) {
-                    popup.classList.add('has-filter');
+                    popup.classList.add('has-filter')
                 } else {
-                    popup.classList.remove('has-filter');
+                    popup.classList.remove('has-filter')
                 }
-                popup.classList.remove('hide');
+                popup.classList.remove('hide')
             }
 
             function closePopup() {
-                const popup = document.querySelector('#popup');
-                popup.classList.add('hide');
+                const popup = document.querySelector('#popup')
+                popup.classList.add('hide')
             }
         </script>
     </body>
