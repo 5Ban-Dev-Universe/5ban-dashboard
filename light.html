@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>5Ban Dashboard</title>
+        <script>
+            if (document.location.protocol == 'http:' || document.location.protocol == '') {
+                window.location.replace("https://5.findflag.kr");
+            }
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Noto+Sans+KR:wght@900&display=swap');
+            body {
+                text-align: center;
+                font-family: 'Noto Sans KR', sans-serif;
+                word-break: keep-all;
+            }
+            div {
+                text-align: center;
+                font-family: 'Noto Sans KR', sans-serif;
+                border-radius: 15px;
+                margin: 0% 10% 0% 10%;
+            }
+            h1 {
+                text-align: center;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 100px;
+                line-height: 60px;
+            }
+            a {
+                text-align: center;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 50px;
+                line-height: 30px;
+            }
+            p {
+                text-align: center;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 30px;
+                /* line-height: 30px; */
+            }
+            h2 {
+                text-align: center;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 30px;
+                color: white;
+            }
+            img {
+                margin: 0% 5px 0% 0%;
+            }
+            #popup {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .7);
+                z-index: 1;
+            }
+            #popup.hide {
+                display: none;
+            }
+            #popup.has-filter {
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+            }
+            #popup .content {
+                padding: 20px 50px 20px 50px;
+                background: #fff;
+                border-radius: 15px;
+                box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h1 style="color: gray;">Welcome to</h1>
+        <h1 style="color: #f40b7e;">5Ban Dashboard</h1>
+        <br><br>
+        <div onclick="window.open('https://dimitimes.github.io');" style="border: 6px solid rgba(244, 11, 128, 1)">
+            <br><br>
+            <img src="img/dimitimes.png" width="40px" alt="My Image">
+            <a>Dimitimes</a>
+            <p>바로가기 ></p>
+        </div>
+        <br>
+        <div onclick="window.open('https://asked.findflag.kr');" style="border: 6px solid rgba(244, 11, 128, 0.7)">
+            <br><br>
+            <img src="img/exam.png" width="38px" alt="My Image">
+            <a>5반 수행평가 목록</a>
+            <p>바로가기 ></p>
+        </div>
+        <br>
+        <div onclick="window.open('https://hcs.eduro.go.kr');" style="border: 6px solid rgba(244, 11, 128, 0.4)">
+            <br><br>
+            <img src="img/self_cheak.png" width="35px" alt="My Image">
+            <a>건강상태 자가진단</a>
+            <p>바로가기 ></p>
+        </div>
+        <br>
+        <div onclick="window.open('https://cs.findflag.kr');" style="border: 6px solid rgba(244, 11, 128, 0.2)">
+            <br><br>
+            <img src="img/admin.png" width="33px" alt="My Image">
+            <a>관리자 페이지</a>
+            <p>바로가기 ></p>
+        </div>
+        <br><br><br><br>
+    </body>
+</html>
